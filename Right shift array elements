@@ -1,0 +1,13 @@
+function shif(arr, n){
+    let len = (n>arr.length) ? n%arr.length : n; 
+let newArr = [];  
+for(i=0; i<arr.length; i++){
+let newPos = i+len;
+if(i+len>=arr.length){
+    newPos = i-len-1;
+}
+    newArr[newPos] = arr[i];
+}
+return newArr;
+}
+shif([1,2,3,4,5],2);
