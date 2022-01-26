@@ -1,0 +1,47 @@
+// unclean
+function dict(input){
+    let length = input[0];
+// console.log(length);
+    let arr = [];
+    let 
+    counter = 1;
+    while(counter <= length){
+        let objVal = input[counter].split(' ');
+        let obj = {
+            "name": objVal[0],
+            "number": objVal[1],
+        }
+        arr.push(obj);
+        counter++;
+    }
+// console.log(arr);
+while(counter<input.length){
+   let matchedVal =  arr.find(el => {
+        if(el.name == input[counter]){
+           return true;
+        }else{
+            return false;
+        }
+    })
+    if(matchedVal){
+         console.log(matchedVal.name+ "=" + matchedVal.number)
+           counter++
+    }else{
+        counter++
+    console.log('Not Found'); 
+    }
+   
+    
+}
+}
+
+
+dict([
+  '3',
+  'sam 99912222',
+  'tom 11122222',
+  'harry 12299933',
+  'sam',
+  'edward',
+  'harry'
+]);
