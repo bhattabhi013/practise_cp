@@ -1,3 +1,26 @@
+*************************Clean******************************
+function processData(input) {
+  
+  var tempArray = input.split("\n");
+  var entriesLength = tempArray.splice(0, 1); 
+  var queries = tempArray.splice(entriesLength); 
+
+  for (var i = 0; i < entriesLength; i++) {
+    tempArray[i] = tempArray[i].split(" ");
+  }
+  
+  var phoneBookMap = new Map(tempArray);
+  
+  for (var i = 0; i < queries.length; i++) {
+    if (phoneBookMap.has(queries[i])) {//check if the qeury (name) exists in the phone book 
+      console.log(queries[i] + "=" + phoneBookMap.get(queries[i]));
+    } else {
+      console.log("Not found");
+    }
+  }
+}
+**********************Clean*****************
+
 // unclean
 function dict(input){
     let length = input[0];
