@@ -1,0 +1,12 @@
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+  let uniqueArr = new Set(nums);
+    uniqueArr = Array.from(uniqueArr);
+    if(uniqueArr.length != nums.length){
+        return true;
+    }
+    return false;
+};
