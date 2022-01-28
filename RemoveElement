@@ -7,3 +7,10 @@ var removeElement = function(nums, val) {
     }
     return nums.length;
 };
+
+Input:
+[3,2,2,3]
+3
+
+Output
+[2,2]
